@@ -11,9 +11,6 @@ start:
 lint:
 	poetry run flake8 task_manager
 
-build:
-	poetry build
-
 test:
 	poetry run python3 manage.py test
 
@@ -30,4 +27,10 @@ migrate:
 	poetry run python manage.py makemigrations
 	poetry run python manage.py migrate
 
-.PHONY: install dev start lint build test test-coverage check migrate
+locale_up:
+	django-admin makemessages -l ru
+
+locale_com:
+	django-admin compilemessages
+
+.PHONY: install dev start lint build test test-coverage check migrate locale_up locale_com

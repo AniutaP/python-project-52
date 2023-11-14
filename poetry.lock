@@ -18,24 +18,6 @@ typing-extensions = {version = ">=4", markers = "python_version < \"3.11\""}
 tests = ["mypy (>=0.800)", "pytest", "pytest-asyncio"]
 
 [[package]]
-name = "beautifulsoup4"
-version = "4.12.2"
-description = "Screen-scraping library"
-optional = false
-python-versions = ">=3.6.0"
-files = [
-    {file = "beautifulsoup4-4.12.2-py3-none-any.whl", hash = "sha256:bd2520ca0d9d7d12694a53d44ac482d181b4ec1888909b035a3dbf40d0f57d4a"},
-    {file = "beautifulsoup4-4.12.2.tar.gz", hash = "sha256:492bbc69dca35d12daac71c4db1bfff0c876c00ef4a2ffacce226d4638eb72da"},
-]
-
-[package.dependencies]
-soupsieve = ">1.2"
-
-[package.extras]
-html5lib = ["html5lib"]
-lxml = ["lxml"]
-
-[[package]]
 name = "brotli"
 version = "1.1.0"
 description = "Python bindings for the Brotli compression library"
@@ -227,18 +209,17 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
-name = "django-bootstrap4"
-version = "23.2"
-description = "Bootstrap 4 for Django"
+name = "django-bootstrap5"
+version = "23.3"
+description = "Bootstrap 5 for Django"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.7"
 files = [
-    {file = "django_bootstrap4-23.2-py3-none-any.whl", hash = "sha256:6c895cdda58de1360bf82cc9e31014ad158dad680198ac8366ca33c19efa972f"},
-    {file = "django_bootstrap4-23.2.tar.gz", hash = "sha256:6b5080a4bce80fa666ac5ce5d4c77ad6fc3c0984d4257a0060d4077f515f62e5"},
+    {file = "django_bootstrap5-23.3-py3-none-any.whl", hash = "sha256:ca1bb2f40175ed1c1725f52f249a574bf629b33b5a0af3bec0eab1de6d72836c"},
+    {file = "django_bootstrap5-23.3.tar.gz", hash = "sha256:21e1956a8a819370decc5d365ce4f4207761cb065afec5a7df8c4c8c49507f2e"},
 ]
 
 [package.dependencies]
-beautifulsoup4 = ">=4.8.0"
 django = ">=3.2"
 
 [[package]]
@@ -414,17 +395,6 @@ files = [
 cli = ["click (>=5.0)"]
 
 [[package]]
-name = "soupsieve"
-version = "2.5"
-description = "A modern CSS selector implementation for Beautiful Soup."
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "soupsieve-2.5-py3-none-any.whl", hash = "sha256:eaa337ff55a1579b6549dc679565eac1e3d000563bcb1c8ab0d0fefbc0c2cdc7"},
-    {file = "soupsieve-2.5.tar.gz", hash = "sha256:5663d5a7b3bfaeee0bc4372e7fc48f9cff4940b3eec54a6451cc5299f1097690"},
-]
-
-[[package]]
 name = "sqlparse"
 version = "0.4.4"
 description = "A non-validating SQL parser."
@@ -482,4 +452,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<4.0"
-content-hash = "836f4606c77a8d70ae43a4d2f057e51f6b74662d3b636519b71fe02b26ca94ae"
+content-hash = "737e947f7b51ef6e3225ebac611dacdba1bdcde5ff7ef5f19dcef7e5df798cad"
