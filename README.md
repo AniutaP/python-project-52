@@ -8,7 +8,7 @@ Registration and authentication are required to work with the system.
 
 
 ### Deploy the app
-`https://task-manager-app-5mxz.onrender.com`
+https://task-manager-app-5mxz.onrender.com
 
 
 ### System requirements:
