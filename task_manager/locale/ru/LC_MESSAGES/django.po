@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-15 02:00+0300\n"
+"POT-Creation-Date: 2023-11-18 00:18+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,9 +20,22 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: task_manager/templates/index.html:4
+#: task_manager/templates/base.html:21 task_manager/templates/index.html:4
 msgid "Task manager"
 msgstr "Менеджер задач"
+
+#: task_manager/templates/base.html:24
+msgid "Users"
+msgstr "Пользователи"
+
+#: task_manager/templates/base.html:25 task_manager/templates/login.html:4
+#: task_manager/templates/login.html:8
+msgid "Login"
+msgstr "Вход"
+
+#: task_manager/templates/base.html:26
+msgid "Sing up"
+msgstr "Регистрация"
 
 #: task_manager/templates/index.html:10
 msgid "Welcome to the Task manager"
@@ -32,4 +45,18 @@ msgstr "Добро пожаловать в Менеджер задач"
 msgid ""
 "Is an application, which allows you to set tasks, assign performers and "
 "change their statuses"
-msgstr "Приложение, которое позволяет ставить задачи, назначать исполнителей и изменять их статусы"
+msgstr ""
+"Приложение, которое позволяет ставить задачи, назначать исполнителей и "
+"изменять их статусы"
+
+#: task_manager/templates/login.html:12 task_manager/templates/login.html:13
+msgid "User name"
+msgstr "Имя пользователя"
+
+#: task_manager/templates/login.html:16 task_manager/templates/login.html:17
+msgid "Password"
+msgstr "Пароль"
+
+#: task_manager/templates/login.html:19
+msgid "Log in"
+msgstr "Войти"

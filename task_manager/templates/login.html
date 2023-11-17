@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% translate 'Login' %}{% endblock %}
+
+{% block content %}
+<div class="container wrapper flex-grow-1">
+      <h1 class="my-4">{% translate 'Login' %}</h1>
+<form method="post">
+  <input type="hidden" name="csrfmiddlewaretoken" value="upvq6a5aYVBDmP4ynVfyrm4buNIxeLwN8wBatnBYFZSpQ7OxmIZUBsrTUY8DYCcO">
+  <div class="mb-3">
+      <label class="form-label" for="id_username">{% translate 'User name' %}</label>
+      <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" class="form-control" placeholder="{% translate 'User name' %}" required id="id_username">
+  </div>
+    <div class="mb-3">
+        <label class="form-label" for="id_password">{% translate 'Password' %}</label>
+        <input type="password" name="password" autocomplete="current-password" class="form-control" placeholder="{% translate 'Password' %}" required id="id_password">
+    </div>
+    <input class="btn btn-primary" type="submit" value="{% translate 'Log in' %}">
+</form>
+</div>
+{% endblock content %}
