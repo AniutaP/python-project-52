@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-18 00:43+0300\n"
+"POT-Creation-Date: 2023-11-19 05:17+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,66 +25,23 @@ msgid "Task manager"
 msgstr "Менеджер задач"
 
 #: task_manager/templates/base.html:24
+#: task_manager/templates/users/users_list.html:4
+#: task_manager/templates/users/users_list.html:8
 msgid "Users"
 msgstr "Пользователи"
 
-#: task_manager/templates/base.html:25
-#: task_manager/templates/create_user.html:4
-#: task_manager/templates/login.html:4 task_manager/templates/login.html:8
+#: task_manager/templates/base.html:25 task_manager/templates/login.html:4
+#: task_manager/templates/login.html:8
+#: task_manager/templates/users/user_create.html:4
 msgid "Login"
 msgstr "Вход"
 
 #: task_manager/templates/base.html:26
-#: task_manager/templates/create_user.html:8
+#: task_manager/templates/users/user_create.html:8
 msgid "Sing up"
 msgstr "Регистрация"
 
-#: task_manager/templates/create_user.html:13
-#: task_manager/templates/create_user.html:14
-msgid "Name"
-msgstr "Имя"
-
-#: task_manager/templates/create_user.html:17
-#: task_manager/templates/create_user.html:18
-msgid "Surname"
-msgstr "Фамилия"
-
-#: task_manager/templates/create_user.html:21
-#: task_manager/templates/create_user.html:22
-#: task_manager/templates/login.html:12 task_manager/templates/login.html:13
-msgid "User name"
-msgstr "Имя пользователя"
-
-#: task_manager/templates/create_user.html:23
-msgid ""
-"Required field. No more than 150 characters. Only letters, numbers and "
-"symbols @/./+/-/_."
-msgstr "Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_."
-
-#: task_manager/templates/create_user.html:27
-#: task_manager/templates/create_user.html:28
-#: task_manager/templates/login.html:16 task_manager/templates/login.html:17
-msgid "Password"
-msgstr "Пароль"
-
-#: task_manager/templates/create_user.html:31
-msgid "Your password must contain at least 3 characters."
-msgstr "Ваш пароль должен содержать как минимум 3 символа."
-
-#: task_manager/templates/create_user.html:36
-#: task_manager/templates/create_user.html:37
-msgid "Confirm password"
-msgstr "Подтверждение пароля"
-
-#: task_manager/templates/create_user.html:38
-msgid "To confirm, please enter the password again."
-msgstr "Для подтверждения введите, пожалуйста, пароль ещё раз."
-
-#: task_manager/templates/create_user.html:40
-msgid "Register"
-msgstr "Зарегистрировать"
-
-#: task_manager/templates/index.html:10
+#: task_manager/templates/index.html:9
 msgid "Welcome to the Task manager"
 msgstr "Добро пожаловать в Менеджер задач"
 
@@ -96,6 +53,74 @@ msgstr ""
 "Приложение, которое позволяет ставить задачи, назначать исполнителей и "
 "изменять их статусы"
 
+#: task_manager/templates/login.html:12 task_manager/templates/login.html:13
+#: task_manager/templates/users/user_create.html:21
+#: task_manager/templates/users/user_create.html:22
+#: task_manager/templates/users/users_list.html:14
+msgid "User name"
+msgstr "Имя пользователя"
+
+#: task_manager/templates/login.html:16 task_manager/templates/login.html:17
+#: task_manager/templates/users/user_create.html:27
+#: task_manager/templates/users/user_create.html:28
+msgid "Password"
+msgstr "Пароль"
+
 #: task_manager/templates/login.html:19
 msgid "Log in"
 msgstr "Войти"
+
+#: task_manager/templates/users/user_create.html:13
+#: task_manager/templates/users/user_create.html:14
+msgid "Name"
+msgstr "Имя"
+
+#: task_manager/templates/users/user_create.html:17
+#: task_manager/templates/users/user_create.html:18
+msgid "Surname"
+msgstr "Фамилия"
+
+#: task_manager/templates/users/user_create.html:23
+msgid ""
+"Required field. No more than 150 characters. Only letters, numbers and "
+"symbols @/./+/-/_."
+msgstr ""
+"Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./"
+"+/-/_."
+
+#: task_manager/templates/users/user_create.html:31
+msgid "Your password must contain at least 3 characters."
+msgstr "Ваш пароль должен содержать как минимум 3 символа."
+
+#: task_manager/templates/users/user_create.html:36
+#: task_manager/templates/users/user_create.html:37
+msgid "Confirm password"
+msgstr "Подтверждение пароля"
+
+#: task_manager/templates/users/user_create.html:38
+msgid "To confirm, please enter the password again."
+msgstr "Для подтверждения введите, пожалуйста, пароль ещё раз."
+
+#: task_manager/templates/users/user_create.html:40
+msgid "Register"
+msgstr "Зарегистрировать"
+
+#: task_manager/templates/users/users_list.html:15
+msgid "Full name"
+msgstr "Полное имя"
+
+#: task_manager/templates/users/users_list.html:16
+msgid "Date of creation"
+msgstr "Дата создания"
+
+#: task_manager/users/forms.py:10
+#, fuzzy
+#| msgid "User name"
+msgid "First name"
+msgstr "Имя пользователя"
+
+#: task_manager/users/forms.py:13
+#, fuzzy
+#| msgid "User name"
+msgid "Last name"
+msgstr "Имя пользователя"

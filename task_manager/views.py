@@ -7,7 +7,3 @@ class IndexView(TemplateView):
 
 class LoginView(TemplateView):
     template_name = 'login.html'
-
-
-class UsersCreateView(TemplateView):
-    template_name = 'create_user.html'
