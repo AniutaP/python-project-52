@@ -10,7 +10,7 @@ from task_manager.mixins import AuthenticateMixin, PermissionMixin, DeleteProtec
 class UsersView(SuccessMessageMixin, ListView):
     template_name = 'users/users_list.html'
     model = get_user_model()
-    context_object_name = 'users_list'
+    context_object_name = 'users'
 
 
 class UserCreateView(CreateView):
