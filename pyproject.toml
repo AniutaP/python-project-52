@@ -11,6 +11,9 @@ classifiers = [
     "Operating System :: OS Independent",
     "Environment :: Console"
 ]
+packages = [
+    {include = "task_manager"}
+]
 
 
 [tool.poetry.dependencies]
