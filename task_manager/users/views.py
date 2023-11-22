@@ -31,7 +31,11 @@ class UserUpdateView(AuthenticateMixin, PermissionMixin, SuccessMessageMixin, Up
     permission_url = reverse_lazy('users_list')
 
 
-class UserDeleteView(AuthenticateMixin, PermissionMixin, DeleteProtectionMixin, SuccessMessageMixin, DeleteView):
+class UserDeleteView(AuthenticateMixin,
+                     PermissionMixin,
+                     DeleteProtectionMixin,
+                     SuccessMessageMixin,
+                     DeleteView):
     template_name = 'users/delete.html'
     model = get_user_model()
     success_url = reverse_lazy('users_list')

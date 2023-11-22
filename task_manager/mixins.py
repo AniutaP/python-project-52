@@ -16,8 +16,8 @@ class AuthenticateMixin(LoginRequiredMixin):
 
 
 class PermissionMixin(UserPassesTestMixin):
-    permission_message = None
-    permission_url = None
+    permission_message = ''
+    permission_url = ''
 
     def test_func(self):
         return self.get_object() == self.request.user
@@ -28,8 +28,8 @@ class PermissionMixin(UserPassesTestMixin):
 
 
 class DeleteProtectionMixin:
-    rejection_message = None
-    rejection_url = None
+    rejection_message = ''
+    rejection_url = ''
 
     def post(self, request, *args, **kwargs):
         try:
