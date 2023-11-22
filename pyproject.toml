@@ -25,11 +25,11 @@ psycopg2-binary = "^2.9.9"
 gunicorn = "^21.2.0"
 whitenoise = {extras = ["brotli"], version = "^6.6.0"}
 django-bootstrap5 = "^23.3"
+coverage = "^7.3.2"
 
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
-coverage = "^7.3.2"
 
 
 [build-system]
