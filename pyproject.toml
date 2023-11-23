@@ -8,8 +8,7 @@ repository = "https://github.com/AniutaP/python-project-52"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-    "Environment :: Console"
+    "Operating System :: OS Independent"
 ]
 packages = [
     {include = "task_manager"}
