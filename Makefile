@@ -16,7 +16,8 @@ test:
 
 test-coverage:
 	poetry run coverage run --source=task_manager manage.py test task_manager
-	poetry run coverage xml
+	poetry run coverage xml --include=task_manager/* --omit=task_manager/settings.py
+	poetry run coverage xml --include=task_manager/* --omit=task_manager/settings.py
 
 check:
 	poetry check
