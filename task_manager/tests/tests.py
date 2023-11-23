@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from http import HTTPStatus
 
 
-class PageTestCase(TestCase):
+class TestPageCase(TestCase):
     def setUp(self):
         self.client = Client()
 
