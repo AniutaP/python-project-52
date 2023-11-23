@@ -1,4 +1,4 @@
-name: page_analyzer_tests
+name: task_manager_tests
 
 on:
   - push
