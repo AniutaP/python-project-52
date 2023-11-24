@@ -1,12 +1,6 @@
 from django.test import TestCase, Client
 from django.urls import reverse_lazy
 from http import HTTPStatus
-import os
-from django import setup
-
-
-setup()
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'task_manager.settings')
 
 
 class TestPageCase(TestCase):
