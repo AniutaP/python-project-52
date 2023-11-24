@@ -4,6 +4,12 @@ from django.contrib.auth import get_user_model
 from task_manager.read_json import load_data
 from django.utils.translation import gettext_lazy
 from django.core.exceptions import ObjectDoesNotExist
+import os
+from django import setup
+
+
+setup()
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'task_manager.settings')
 
 
 class UserTestCase(TestCase):
