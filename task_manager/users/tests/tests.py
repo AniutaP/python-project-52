@@ -4,10 +4,6 @@ from django.contrib.auth import get_user_model
 from task_manager.read_json import load_data
 from django.utils.translation import gettext_lazy
 from django.core.exceptions import ObjectDoesNotExist
-from django.conf import settings
-
-
-settings.configure()
 
 
 class UserTestCase(TestCase):
