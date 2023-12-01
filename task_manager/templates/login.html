@@ -7,6 +7,6 @@
     <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
         {% bootstrap_form form %}
-    <button class="btn btn-primary" type="submit">{% translate "Log in" %}</button>
+    <button class="btn btn-primary btn-sm" type="submit">{% translate "Log in" %}</button>
     </form>
 {% endblock %}

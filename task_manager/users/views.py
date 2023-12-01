@@ -3,31 +3,31 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.messages.views import SuccessMessageMixin
 from .forms import UserForm
 from django.urls import reverse_lazy
-from django.utils.translation import gettext_lazy
+from django.utils.translation import gettext_lazy as _
 from task_manager.mixins import AuthenticateMixin, PermissionMixin, DeleteProtectionMixin
 
 
-class UsersView(SuccessMessageMixin, ListView):
+class UsersView(AuthenticateMixin, ListView):
     template_name = 'users/users_list.html'
     model = get_user_model()
     context_object_name = 'users'
 
 
-class UserCreateView(CreateView):
+class UserCreateView(AuthenticateMixin, SuccessMessageMixin, CreateView):
     template_name = 'users/create.html'
     model = get_user_model()
     form_class = UserForm
     success_url = reverse_lazy('login')
-    success_message = gettext_lazy('User has been successfully registered')
+    success_message = _('User has been successfully registered')
 
 
-class UserUpdateView(AuthenticateMixin, PermissionMixin, SuccessMessageMixin, UpdateView):
+class UserUpdateView(AuthenticateMixin, SuccessMessageMixin, UpdateView):
     template_name = 'users/update.html'
     model = get_user_model()
     form_class = UserForm
     success_url = reverse_lazy('users_list')
-    success_message = gettext_lazy('User is successfully updated')
-    permission_message = gettext_lazy('You have no rights to change another user.')
+    success_message = _('User is successfully updated')
+    permission_message = _('You have no rights to change another user.')
     permission_url = reverse_lazy('users_list')
 
 
@@ -39,10 +39,10 @@ class UserDeleteView(AuthenticateMixin,
     template_name = 'users/delete.html'
     model = get_user_model()
     success_url = reverse_lazy('users_list')
-    success_message = gettext_lazy('User is successfully deleted')
-    permission_message = gettext_lazy('You have no rights to change another user.')
+    success_message = _('User is successfully deleted')
+    permission_message = _('You have no rights to change another user.')
     permission_url = 'users_list'
-    rejection_message = gettext_lazy('Unable to delete user because it is in use')
+    rejection_message = _('Unable to delete user because it is in use')
     rejection_next_url = reverse_lazy('users_list')
 
     def post(self, request, *args, **kwargs):
