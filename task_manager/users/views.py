@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.messages.views import SuccessMessageMixin
-from task_manager.users.forms import UserForm
+from task_manager.users.forms import UserForm, UpdateUserForm
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from task_manager.mixins import AuthenticateMixin, PermissionMixin, DeleteProtectionMixin
@@ -24,7 +24,7 @@ class UserCreateView(SuccessMessageMixin, CreateView):
 class UserUpdateView(AuthenticateMixin, PermissionMixin, SuccessMessageMixin, UpdateView):
     template_name = 'users/update.html'
     model = get_user_model()
-    form_class = UserForm
+    form_class = UpdateUserForm
     success_url = reverse_lazy('users_list')
     success_message = _('User is successfully updated')
     permission_message = _('You have no rights to change another user.')

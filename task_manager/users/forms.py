@@ -18,3 +18,9 @@ class UserForm(UserCreationForm):
         fields = ('first_name', 'last_name',
                   'username', 'password1', 'password2'
                   )
+
+
+class UpdateUserForm(UserForm):
+    def clean_username(self):
+        username = self.cleaned_data.get('username')
+        return username
