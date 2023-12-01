@@ -7,13 +7,13 @@ from django.utils.translation import gettext_lazy as _
 from task_manager.mixins import AuthenticateMixin, PermissionMixin, DeleteProtectionMixin
 
 
-class UsersView(AuthenticateMixin, ListView):
+class UsersView(ListView):
     template_name = 'users/users_list.html'
     model = get_user_model()
     context_object_name = 'users'
 
 
-class UserCreateView(AuthenticateMixin, SuccessMessageMixin, CreateView):
+class UserCreateView(SuccessMessageMixin, CreateView):
     template_name = 'users/create.html'
     model = get_user_model()
     form_class = UserForm
@@ -21,7 +21,7 @@ class UserCreateView(AuthenticateMixin, SuccessMessageMixin, CreateView):
     success_message = _('User has been successfully registered')
 
 
-class UserUpdateView(AuthenticateMixin, SuccessMessageMixin, UpdateView):
+class UserUpdateView(AuthenticateMixin, PermissionMixin, SuccessMessageMixin, UpdateView):
     template_name = 'users/update.html'
     model = get_user_model()
     form_class = UserForm
