@@ -37,8 +37,8 @@ class TestUserCreateView(UserTestCase):
             test_user_data['username']
         )
 
-    def test_create_not_valid_username(self):
-        test_user_data = self.test_user['create']['not_valid']
+    def test_create_invalid_username(self):
+        test_user_data = self.test_user['create']['invalid']
         response = self.client.post(reverse_lazy('user_create'), data=test_user_data)
         errors = response.context['form'].errors
         self.assertEqual(response.status_code, 200)
