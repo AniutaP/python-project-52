@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load i18n %}
 {% load django_bootstrap5 %}
-{% block title %}{% translate 'Login' %}{% endblock %}
 {% block content %}
     <h1 class="my-4" >{% translate 'Login' %}</h1>
     <form action="{% url 'login' %}" method="post">

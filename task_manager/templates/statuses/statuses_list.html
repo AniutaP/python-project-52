@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load i18n %}
 {% load django_bootstrap5 %}
-{% block title %}{% translate 'Statuses' %}{% endblock %}
 {% block content %}
     <h2 class="my-4">{% translate 'Statuses' %}</h2>
     <a class="btn btn-primary btn-sm" href="{% url 'status_create' %}" role="button">{% translate 'Create status' %}</a>
