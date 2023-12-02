@@ -44,11 +44,11 @@ msgstr "Статусы"
 
 #: task_manager/statuses/views.py:21
 msgid "Status successfully created"
-msgstr "Статус успешно изменен"
+msgstr "Статус успешно создан"
 
 #: task_manager/statuses/views.py:29
 msgid "Status successfully updated"
-msgstr "Статус успешно обновлен"
+msgstr "Статус успешно изменен"
 
 #: task_manager/statuses/views.py:37
 msgid "Status successfully deleted"
