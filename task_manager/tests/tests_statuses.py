@@ -34,9 +34,8 @@ class TestStatusCreateView(StatusTestCase):
         self.assertRedirects(response, reverse_lazy('login'))
 
     def test_create_status(self):
-        status_data = self.test_status['create'].copy()
+        status_data = self.test_status['create']
         response = self.client.post(reverse_lazy('status_create'), data=status_data)
-        print(Status.objects.last())
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse_lazy('statuses_list'))
         self.assertEqual(Status.objects.count(), self.count + 1)
@@ -55,7 +54,7 @@ class TestStatusUpdateView(StatusTestCase):
         self.assertRedirects(response, reverse_lazy('login'))
 
     def test_update_status(self):
-        status_data = self.test_status['update'].copy()
+        status_data = self.test_status['update']
         response = self.client.post(
             reverse_lazy('status_update', kwargs={'pk': 2}), data=status_data
         )

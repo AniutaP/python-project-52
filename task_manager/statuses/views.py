@@ -36,4 +36,4 @@ class StatusDeleteView(AuthenticateMixin, DeleteProtectionMixin,
     success_url = reverse_lazy('statuses_list')
     success_message = _('Status successfully deleted')
     rejection_message = _('Unable to delete status because it is in use')
-    rejection_next_url = reverse_lazy('statuses_list')
+    rejection_url = reverse_lazy('statuses_list')

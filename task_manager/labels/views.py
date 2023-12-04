@@ -36,4 +36,4 @@ class LabelDeleteView(AuthenticateMixin, DeleteProtectionMixin,
     success_url = reverse_lazy('labels_list')
     success_message = _('Label successfully deleted')
     rejection_message = _('Unable to delete label because it is in use')
-    rejection_next_url = reverse_lazy('labels_list')
+    rejection_url = reverse_lazy('labels_list')
