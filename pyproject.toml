@@ -26,6 +26,7 @@ whitenoise = {extras = ["brotli"], version = "^6.6.0"}
 django-bootstrap5 = "^23.3"
 coverage = "^7.3.2"
 django-extensions = "^3.2.3"
+django-filter = "^23.4"
 
 
 [tool.poetry.group.dev.dependencies]
