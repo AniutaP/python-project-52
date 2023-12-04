@@ -2,9 +2,9 @@ from django.test import TestCase, Client
 from django.urls import reverse_lazy
 from task_manager.read_json import load_data
 from django.core.exceptions import ObjectDoesNotExist
-from task_manager.users.models import User
-from task_manager.statuses.models import Status
-from task_manager.tasks.models import Task
+from included_apps.users import User
+from included_apps.statuses import Status
+from included_apps.tasks.models import Task
 
 
 class TaskTestCase(TestCase):

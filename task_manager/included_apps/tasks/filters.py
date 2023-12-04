@@ -2,7 +2,7 @@ from django import forms
 from django_filters import BooleanFilter, FilterSet, ModelChoiceFilter
 from django.utils.translation import gettext_lazy as _
 from .models import Task
-from task_manager.labels.models import Label
+from task_manager.included_apps.labels.models import Label
 
 
 class TaskFilter(FilterSet):

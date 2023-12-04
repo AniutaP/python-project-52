@@ -3,7 +3,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from task_manager.mixins import AuthenticateMixin, AuthorPermissionMixin
 from .forms import TaskForm
 from .models import Task
-from task_manager.users.models import User
+from task_manager.included_apps.users.models import User
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django_filters.views import FilterView
