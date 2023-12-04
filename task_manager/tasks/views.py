@@ -1,6 +1,6 @@
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
 from django.contrib.messages.views import SuccessMessageMixin
-from task_manager.mixins import AuthenticateMixin, DeleteProtectionMixin, AuthorPermissionMixin
+from task_manager.mixins import AuthenticateMixin, AuthorPermissionMixin
 from .forms import TaskForm
 from .models import Task
 from task_manager.users.models import User
@@ -44,11 +44,11 @@ class TaskUpdateView(AuthenticateMixin, SuccessMessageMixin, UpdateView):
     success_message = _('Task successfully updated')
 
 
-class TaskDeleteView(AuthenticateMixin, AuthorPermissionMixin, DeleteProtectionMixin,
+class TaskDeleteView(AuthenticateMixin, AuthorPermissionMixin,
                      SuccessMessageMixin, DeleteView):
     template_name = 'tasks/delete.html'
     model = Task
     success_url = reverse_lazy('tasks_list')
     success_message = _('Task successfully deleted')
-    permission_message = _('Only the author of the task can delete it')
-    permission_url = reverse_lazy('tasks_list')
+    author_permission_message = _('Only the author of the task can delete it')
+    author_permission_url = reverse_lazy('tasks_list')

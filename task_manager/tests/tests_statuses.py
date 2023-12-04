@@ -65,7 +65,7 @@ class TestStatusUpdateView(StatusTestCase):
         self.assertEqual(Status.objects.get(id=self.status2.id).name, status_data['name'])
 
 
-class TestUserDeleteView(StatusTestCase):
+class TestStatusDeleteView(StatusTestCase):
     def test_delete_status_view(self):
         response = self.client.get(reverse_lazy('status_delete', kwargs={'pk': 3}))
         self.assertEqual(response.status_code, 200)

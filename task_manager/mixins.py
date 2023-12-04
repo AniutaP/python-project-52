@@ -23,7 +23,7 @@ class PermissionMixin(UserPassesTestMixin):
         return self.get_object() == self.request.user
 
     def handle_no_permission(self):
-        messages.error(self.request, self.permission_message())
+        messages.error(self.request, self.get_permission_message())
         return redirect(self.permission_url)
 
 
@@ -39,6 +39,13 @@ class DeleteProtectionMixin:
             return redirect(self.rejection_url)
 
 
-class AuthorPermissionMixin(PermissionMixin):
+class AuthorPermissionMixin(UserPassesTestMixin):
+    author_permission_message = ''
+    author_permission_url = ''
+
     def test_func(self):
         return self.get_object().author == self.request.user
+
+    def handle_no_permission(self):
+        messages.error(self.request, self.author_permission_message)
+        return redirect(self.author_permission_url)
