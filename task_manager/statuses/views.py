@@ -4,7 +4,7 @@ from .forms import StatusForm
 from .models import Status
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
-from task_manager.mixins import AuthenticateMixin, PermissionMixin, DeleteProtectionMixin
+from task_manager.mixins import AuthenticateMixin, DeleteProtectionMixin
 
 
 class StatusesView(ListView):

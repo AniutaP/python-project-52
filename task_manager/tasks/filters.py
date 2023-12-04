@@ -5,7 +5,7 @@ from .models import Task
 
 
 class TaskFilter(FilterSet):
-    own_tasks= BooleanFilter(
+    own_tasks = BooleanFilter(
         field_name='author',
         label=_('Only own tasks'),
         method='filtered_own_tasks',
