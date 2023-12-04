@@ -37,7 +37,7 @@ class TestTaskCreateView(TaskTestCase):
         self.assertRedirects(response, reverse_lazy('login'))
 
     def test_create_task(self):
-        task_data = self.test_task['create'].copy()
+        task_data = self.test_task['create']
         response = self.client.post(reverse_lazy('task_create'), data=task_data)
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse_lazy('tasks_list'))
@@ -51,7 +51,7 @@ class TestTaskUpdateView(TaskTestCase):
         self.assertTemplateUsed(response, template_name='tasks/update.html')
 
     def test_update_task(self):
-        task_data = self.test_task['update'].copy()
+        task_data = self.test_task['update']
         response = self.client.post(
             reverse_lazy('task_update', kwargs={'pk': 2}), data=task_data
         )
