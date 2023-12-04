@@ -155,8 +155,6 @@ msgstr ""
 
 #: task_manager/templates/labels/create.html:5
 #: task_manager/templates/labels/labels_list.html:6
-#, fuzzy
-#| msgid "Create task"
 msgid "Create label"
 msgstr "Создать метку"
 
