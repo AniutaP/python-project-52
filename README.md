@@ -1,4 +1,3 @@
-### Hexlet tests and linter status:
 [![Actions Status](https://github.com/AniutaP/python-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AniutaP/python-project-52/actions)  [![Maintainability](https://api.codeclimate.com/v1/badges/b1032eae666d3d00e8e4/maintainability)](https://codeclimate.com/github/AniutaP/python-project-52/maintainability)  [![Test Coverage](https://api.codeclimate.com/v1/badges/b1032eae666d3d00e8e4/test_coverage)](https://codeclimate.com/github/AniutaP/python-project-52/test_coverage)
 
 
