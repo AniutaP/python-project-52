@@ -2,8 +2,8 @@ from django.test import TestCase, Client
 from django.urls import reverse_lazy
 from task_manager.read_json import load_data
 from django.core.exceptions import ObjectDoesNotExist
-from included_apps.statuses import Status
-from included_apps.users import User
+from task_manager.included_apps.statuses.models import Status
+from task_manager.included_apps.users.models import User
 
 
 class StatusTestCase(TestCase):
