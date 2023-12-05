@@ -17,7 +17,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
-django = "^4.2.7"
+django = "^4.2.8"
 python-dotenv = "^1.0.0"
 dj-database-url = "^2.1.0"
 psycopg2-binary = "^2.9.9"
@@ -27,6 +27,7 @@ django-bootstrap5 = "^23.3"
 coverage = "^7.3.2"
 django-extensions = "^3.2.3"
 django-filter = "^23.4"
+rollbar = "^1.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
