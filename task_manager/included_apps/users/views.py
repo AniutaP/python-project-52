@@ -7,7 +7,7 @@ from django.utils.translation import gettext_lazy as _
 from task_manager.mixins import AuthenticateMixin, PermissionMixin, DeleteProtectionMixin
 
 
-class UsersView(ListView):
+class UsersView(AuthenticateMixin, ListView):
     template_name = 'users/users_list.html'
     model = get_user_model()
     context_object_name = 'users'

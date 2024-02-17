@@ -7,7 +7,7 @@ from django.utils.translation import gettext_lazy as _
 from task_manager.mixins import AuthenticateMixin, DeleteProtectionMixin
 
 
-class StatusesView(ListView):
+class StatusesView(AuthenticateMixin, ListView):
     template_name = 'statuses/statuses_list.html'
     model = Status
     context_object_name = 'statuses'

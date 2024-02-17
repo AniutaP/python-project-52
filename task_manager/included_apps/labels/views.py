@@ -7,7 +7,7 @@ from django.utils.translation import gettext_lazy as _
 from task_manager.mixins import AuthenticateMixin, DeleteProtectionMixin
 
 
-class LabelsView(ListView):
+class LabelsView(AuthenticateMixin, ListView):
     template_name = 'labels/labels_list.html'
     model = Label
     context_object_name = 'labels'
