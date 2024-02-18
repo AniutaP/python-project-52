@@ -17,7 +17,7 @@ class TasksView(AuthenticateMixin, FilterView):
     context_object_name = 'tasks'
 
 
-class TaskView(DetailView):
+class TaskView(AuthenticateMixin, DetailView):
     template_name = 'tasks/show_one_task.html'
     model = Task
     context_object_name = 'task'
